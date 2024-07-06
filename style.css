@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.corpo {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    background-color: rgba(211, 211, 211, 0.3);
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    'display display display display'
+    'cpy ce c division'
+    'n7 n8 n9 multiplication'
+    'n4 n5 n6 subtraction'
+    'n1 n2 n3 sum'
+    '.  n0 period equals'
+    ;
+}
+
+.corpo .display {
+    grid-area: display;
+    height: 90px;
+    width: 270px;
+    border-radius: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0.1px grey;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 30px;
+    position: relative;
+}
+
+.display p#number {
+    font-size: 2em;
+}
+
+.display p#operator {
+    position: absolute;
+    font-size: 1em;
+    top: 10%;
+    left: 10%;
+}
+
+.corpo .div-buttons {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 0;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0.1px grey;
+
+    --tamanho: 60px;
+    width: var(--tamanho);
+    height: var(--tamanho);
+    border-radius: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpo .number-button:hover {
+    background-color: rgba(128, 128, 128, 0.85);
+    color: white;
+}
+
+.corpo .functionality {
+    background-color: red;
+    color: white;
+}
+
+#n0 {
+    grid-area: n0;
+}
+#n1 {
+    grid-area: n1;
+}
+#n2 {
+    grid-area: n2;
+}
+#n3 {
+    grid-area: n3;
+}
+#n4 {
+    grid-area: n4;
+}
+#n5 {
+    grid-area: n5;
+}
+#n6 {
+    grid-area: n6;
+}
+#n7 {
+    grid-area: n7;
+}
+#n8 {
+    grid-area: n8;
+}
+#n9 {
+    grid-area: n9;
+}
+
+#division {
+    grid-area: division;
+}
+#subtraction {
+    grid-area: subtraction;
+}
+#sum {
+    grid-area: sum;
+}
+#multiplication {
+    grid-area: multiplication;
+}
+#equals {
+    grid-area: equals;
+}
+
+#period {
+    grid-area: period;
+}
+
+#c {
+    grid-area: c;
+}
+
+#ce {
+    grid-area: ce;
+}
+
+#cpy {
+    grid-area: cpy;
+}
+
+.corpo-externo {
+    position: absolute;
+    left: -300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: left 0.5s, transform 0.5s;
+}
+
+.exibir-calculadora {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#btn-exibidor {
+    padding: 10px 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: grey;
+    cursor: pointer;
+}
