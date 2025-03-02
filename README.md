@@ -1,3 +1,2 @@
 # RegEx-Calculator
-A calculator which uses Regular Expressions to match the correct format for the calculus.
-It was first supposed to be a variant of the Reverse-Polish-Notation calculator, but then I decided to use RegEx for learning purposes.
+A calculator that leverages Regular Expressions to validate and process mathematical expressions. Initially envisioned as a variant of a Reverse Polish Notation (RPN) calculator, it evolved into a regex-based solution for learning and experimentation. This approach ensures structured input handling while enhancing pattern recognition in mathematical computations.
